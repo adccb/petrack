@@ -8,3 +8,46 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--nav-height);
+    width: 100vw;
+    background-color: var(--color-brand);
+  }
+
+  aside {
+    position: absolute;
+    top: var(--nav-height);
+    height: calc(100vh - var(--nav-height));
+    width: var(--aside-width);
+    border-right: var(--stroke-size) var(--color-brand) solid;
+  }
+
+  main {
+    position: absolute;
+    top: var(--nav-height);
+    left: var(--aside-width);
+    height: calc(100vh - var(--nav-height));
+    width: calc(100vw - var(--aside-width));
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      width: min(900px, 100%);
+      padding: 1rem;
+    }
+  }
+}

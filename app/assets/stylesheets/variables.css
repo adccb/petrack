@@ -1,0 +1,7 @@
+body {
+  --nav-height: min(2rem, 80px);
+  --aside-width: min(600px, max(30vw, 200px));
+
+  --color-brand: black;
+  --stroke-size: 2px;
+}
