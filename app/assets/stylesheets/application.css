@@ -34,6 +34,8 @@ body {
     height: calc(100vh - var(--nav-height));
     width: var(--aside-width);
     border-right: var(--stroke-size) var(--color-brand) solid;
+
+    background-color: var(--color-background-neutral-weak);
   }
 
   main {
@@ -44,6 +46,8 @@ body {
     width: calc(100vw - var(--aside-width));
     display: flex;
     justify-content: center;
+
+    background-color: var(--color-background-neutral);
 
     & > div {
       width: min(900px, 100%);
