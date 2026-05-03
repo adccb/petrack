@@ -27,6 +27,9 @@
     <nav></nav>
 
     <aside>
+      <%= turbo_frame_tag "sidebar", src: sidebar_index_path, refresh: "morph", target: "_top" do %>
+        Loading...
+      <% end %>
     </aside>
 
     <main>
