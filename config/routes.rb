@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pets
   root "homepage#index"
 
   resource :session
