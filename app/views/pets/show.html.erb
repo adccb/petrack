@@ -1,0 +1,21 @@
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<div class="row">
+  <%= link_to "← All pets", pets_path %>
+  <h1>
+    <%= @presenter.species %>
+    <%= @pet.name %>
+  </h1>
+
+  <div class="row no-padding" style="gap: .5rem;">
+    <%= link_to "Edit", edit_pet_path(@pet) %>
+    <%= button_to "Delete", @pet, method: :delete %>
+  </div>
+</div>
+
+<%= render @pet %>
+
+<div>
+</div>

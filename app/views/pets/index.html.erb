@@ -1,0 +1,19 @@
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<% content_for :title, "Pets" %>
+
+<div class="row">
+  <h1>Pets</h1>
+  <%= link_to "Add", new_pet_path %>
+</div>
+
+<div id="pets">
+  <% @pets.each do |pet| %>
+    <%= link_to pet_path(pet) do %>
+      <span><%= pet.name %></span>
+    <% end %>
+  <% end %>
+</div>
+

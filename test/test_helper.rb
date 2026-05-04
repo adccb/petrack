@@ -12,5 +12,8 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+    def auth!
+      sign_in_as(User.first)
+    end
   end
 end
