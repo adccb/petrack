@@ -2,6 +2,7 @@ require "test_helper"
 
 class PetsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    auth!
     @pet = pets(:one)
   end
 
