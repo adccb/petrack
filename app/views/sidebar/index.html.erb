@@ -1,7 +1,17 @@
 <turbo-frame id="sidebar">
   <ul>
     <% @items.each do |item| %>
-      <li><%= item %></li>
+      <li>
+        <%= link_to item[:text], item[:url] %>
+
+        <% if item[:items] %>
+          <ul>
+            <% item[:items].each do |subitem| %>
+              <li><%= link_to subitem[:text], subitem[:url] %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 </turbo-frame>

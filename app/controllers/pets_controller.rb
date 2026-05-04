@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: %i[ show edit update destroy ]
+  before_action :ensure_presenter, only: %i[ show edit ]
 
   # GET /pets or /pets.json
   def index
@@ -66,5 +67,11 @@ class PetsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def pet_params
       params.expect(pet: [ :name, :species, :note, :user_id ])
+    end
+
+    private
+
+    def ensure_presenter
+      @presenter = PetsPresenter.new @pet
     end
 end

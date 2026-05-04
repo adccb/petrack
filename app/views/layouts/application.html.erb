@@ -24,13 +24,11 @@
   </head>
 
   <body>
-    <nav></nav>
-
-    <aside>
+    <nav>
       <%= turbo_frame_tag "sidebar", src: sidebar_index_path, refresh: "morph", target: "_top" do %>
         Loading...
       <% end %>
-    </aside>
+    </nav>
 
     <main>
       <div>
