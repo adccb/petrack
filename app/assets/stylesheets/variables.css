@@ -1,16 +1,25 @@
 body {
   --nav-height: min(2rem, 80px);
   --aside-width: min(200px, max(30vw, 200px));
-
   --stroke-size: 2px;
 
-  /* COLORS */
-  --color-brand: black;
-  --color-background: #dedede;
-  --color-background-inverse: #555;
-  --color-background-inverse-hover: #222;
+  /* raw color tokens */
+  --color-brand: #fcad03;
 
-  --color-text: black;
-  --color-text-hover: #222;
-  --color-text-inverse: white;
+  --w-20: color-mix(in srgb, var(--color-brand), white 20%);
+  --w-50: color-mix(in srgb, var(--color-brand), white 50%);
+  --w-90: color-mix(in srgb, var(--color-brand), white 90%);
+
+  --b-20: color-mix(in srgb, var(--color-brand), black 20%);
+  --b-50: color-mix(in srgb, var(--color-brand), black 50%);
+  --b-90: color-mix(in srgb, var(--color-brand), black 90%);
+
+
+  /* COLORS */
+  --color-background: color-mix(in srgb, var(--color-brand), white 90%);
+  --color-background-inverse: color-mix(in srgb, var(--color-brand), black 50%);
+
+  --color-text: var(--color-background-inverse);
+  --color-text-hover: color-mix(in srgb, var(--color-brand), black 30%%);
+  --color-text-inverse: var(--color-background);
 }

@@ -1,29 +1,34 @@
-nav turbo-frame[id="sidebar"] {
-  background-color: var(--color-background-inverse);
-  color: var(--color-text-inverse);
-  padding: 1rem;
+nav { 
+  padding: 0 1rem;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  & > turbo-frame[id="sidebar"] {
+    background-color: var(--color-background-inverse);
+    color: var(--color-text-inverse);
 
-    li {
-      width: 100%;
-      transition: all 0.2s ease;
-      padding: 0 1rem;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
 
-      &:first-child { padding-top: 0; }
+      li {
+        width: 100%;
+        transition: all 0.2s ease;
+        padding: 0;
 
-      &:hover { }
+        &:first-child { padding-top: 0; }
 
-      a {
-        text-decoration: none;
-        color: var(--color-text-inverse);
-      }
+        a {
+          text-decoration: none;
+          color: var(--color-text-inverse);
 
-      ul {
-        li { }
+          &:hover { color: color-mix(in srgb, var(--color-text-inverse), black 30%); }
+        }
+
+        ul {
+          li {
+            padding-left: 1rem;
+          }
+        }
       }
     }
   }
